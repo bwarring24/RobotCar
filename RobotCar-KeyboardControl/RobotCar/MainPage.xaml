@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="RobotCar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RobotCar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" KeyDown="Grid_KeyDown" KeyUp="Grid_KeyUp">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Orientation="Vertical">
+            <TextBlock Name="blkMotor1" FontSize="60" Text="Motor 1 Controls" TextAlignment="Center" />
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                <Button Name="btnMotor1CW" Content="Counter Clockwise" Click="btnMotor1CW_Click" Margin="10,0,0,0" />
+                <Button Name="btnMotor1CCW" Content="Counter Clockwise" Click="btnMotor1CCW_Click" Margin="10,0,0,0" />
+            </StackPanel>
+
+            <Button Name="btnMotor1Stop" Content="STOP!" HorizontalAlignment="Center" Margin="0,20,0,0" Click="btnMotor1Stop_Click"/>
+
+            <TextBlock Name="blkMotor1Status" Height="Auto" Margin="0,20,0,0" HorizontalAlignment="Center" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            <TextBlock Name="blkMotor2" FontSize="60" Text="Motor 2 Controls" TextAlignment="Center" />
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                <Button Name="btnMotor2CW" Content="Counter Clockwise" Click="btnMotor2CW_Click" Margin="10,0,0,0" />
+                <Button Name="btnMotor2CCW" Content="Counter Clockwise" Click="btnMotor2CCW_Click" Margin="10,0,0,0" />
+            </StackPanel>
+
+            <Button Name="btnMotor2Stop" Content="STOP!" HorizontalAlignment="Center" Margin="0,20,0,0" Click="btnMotor2Stop_Click" />
+
+            <TextBlock Name="blkMotor2Status" Height="Auto" Margin="0,20,0,0" HorizontalAlignment="Center" />
+        </StackPanel>
+
+    </Grid>
+</Page>
